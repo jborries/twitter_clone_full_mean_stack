@@ -1,1 +1,1 @@
-# twitter_clone
+# Angular/MEAN single page twitter_clone app
