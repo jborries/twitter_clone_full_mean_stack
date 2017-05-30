@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -63,3 +64,18 @@ var initPassport = require('./passport-init');
 initPassport(passport);
 
 module.exports = app;
+=======
+//app.js for Node.js server
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 3000; //start sever via "node app" command, then type "localhost:3000 in browser. Exit via "ctrl+c"//
+
+app.use(express.static(__dirname + '/public'));     //serve static assets
+app.get('*', function(req, res) {
+    res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+});
+
+app.listen(port, function() {
+    console.log('Listening on ' + port);
+});
+>>>>>>> dce15c9a93976bd074c052bbb52672bcd603efe2

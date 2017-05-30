@@ -1,0 +1,38 @@
+<!--index.html-->
+<html>
+
+<head>
+    <title>Chirp</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+    <!--===Need to include this above line to be able to use ngRoute for routing controllers. ngRoute needs to be included in the javascript chirpApp file.===-->
+    <script src="javascripts/chirpApp.js"></script>
+
+    <!--===Stylesheets===-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body ng-app="chirpApp">
+    <!--===Links to the angular Module in the javascript file chirpApp.js===-->
+    <div id='main' class="container">
+
+        <!--===Start Navigation Bar for all template views===-->
+        <nav class="navbar-fluid navbar-default navbar-fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"> Chirp! </a>
+                <p class="navbar-text"> A single-page twitter clone app</p>
+                <p class="navbar-right navbar-text"><a href="#/login">Login</a> or <a href="#/register">Register</a></p>
+            </div>
+        </nav>
+        <!--===End Navigation Bar for all template views===-->
+
+        <div class="col-md-offset-2 col-md-8">
+            <div ng-view>
+                <!--===The ng-view directive creates partials. The other templates/views will load within this space===-->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
